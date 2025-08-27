@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Hotline</title>
+
+    <!-- tailwind cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- font-awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="./style.css">
+
+
+</head>
+<body>
+    <header>
+        <!-- nav-bar section -->
+        <nav class="max-w-[1380px] mx-auto flex justify-between items-center mt-[25px]">
+            <div class="nav-left flex gap-3">
+                <img class="h-[60] w-[60px]" src="./assets/logo.png" alt="">
+                <h1 class="text-[#006747] text-[20px] font-bold">Emergency <br>Services</h1>
+            </div>
+
+            <div class="nav-right flex gap-[20px]">
+                <div class="flex justify-center gap-3 items-center  w-[123px] h-[52px] rounded-[50px] bg-[#41ff6b1a] ">
+                    <h3 id="heart-count">0</h3>
+                    <img class="h-[30px] w-[30px]" src="./assets/heart.png" alt="">
+                </div>
+                <div class="flex justify-center gap-[10px] items-center  w-[123px] h-[52px] rounded-[50px] bg-[#41ff6b1a] ">
+                    <h3 id="total-coin">100</h3>
+                    <img class="h-[30px] w-[30px]" src="./assets/coin.png" alt="">
+                </div>
+                
+                <div class="w-[127px] h-[52px] gap-[10px] bg-[#00a63e] flex justify-center items-center rounded-[50px]">
+                    <h3 class="text-white">0</h3>
+                    <h3 class="text-white">Copy</h3>
+                </div>
+                
+                
+            </div>
+
+        </nav>
+    </header>
+    <main>
+
+        <!-- banner section -->
+        <div class="h-[240px] w-full bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] mt-[25px] pt-5">
+            <img class="h-[92px] w-[92px] mx-auto" src="./assets/logo-dark.png" alt="">
+            <h2 class="text-[40px] font-semibold text-white text-center my-3">জরুরি সেবা ডিরেক্টরি</h2>
+            <p class="text-center text-white">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
+        </div>
+
+        <!-- service and call history section -->
+        <div class="bg-[#dfefff]">
+            <div class="parent-div max-w-[1380px] mx-auto flex gap-5">
+                
+
+                <!-- left container -->
+                <div class="left-div mt-[25px] flex-1 items-stretch">
+                    <!-- cards container -->
+                    <div class="cards-container gap-[30px] grid grid-cols-3">
+                        <!-- first-card -->
+                        <div class="cards bg-white p-[32px] rounded-[12px]">
+                            <div class="flex justify-between items-center">
+                                <div class="p-[14px] bg-[#ffe3e2] rounded-[16px]">
+                                <img class="h-[32px] w-[32px]" src="./assets/emergency.png" alt="">
+                                </div>
+                                <span  class="heart-btn text-[24px] cursor-pointer"><i class="fa-regular fa-heart"></i></span>
+                            </div>
+                            <h3 class="text-[24px] font-bold mt-[24px]">জাতীয় জরুরি সেবা</h3>
+                            <p class="text-[#5C5C5C]">National Emergency</p>
+                            <h2 class="text-[32px] font-semibold mt-[24px]">999</h2>
+                            <div class="h-[37px] w-[103px] bg-[#f2f2f2] flex  justify-center  items-center rounded-[9999px] mb-[24px]">
+                                <p class="text-[#5C5C5C]">সার্বজনীন</p>
+                            </div>
+                            <div class="flex gap-2">
+                                <button class="w-[182px] h-[40px] rounded-[8px] border-1 border-gray-300 cursor-pointer text-[#5C5C5C] hover:bg-[#00a606] hover:text-white">
+                                   <i class="fa-regular fa-copy"></i> Copy
+                                </button>
+                                <button id="call-btn-1" class=" w-[182px] h-[40px] rounded-[8px] bg-[#00a606] text-white cursor-pointer hover:bg-[#5C5C5C] hover:text-white hover: border-1 border-gray-300">
+                                   <i class="fa-solid fa-phone"></i> Call
+                                </button>
+                            </div>
+
+                        </div>
+                        <!-- second-card -->
+                        <div class="cards bg-white p-[32px] rounded-[12px]">
+                            <div class="flex justify-between items-center">
+                                <div class="p-[14px] bg-[#DFEFFF] rounded-[16px]">
+                                <img class="h-[32px] w-[32px]" src="./assets/police.png" alt="">
+                                </div>
+                                <span class="heart-btn text-[24px] cursor-pointer"><i class="fa-regular fa-heart"></i></span>
+                            </div>
+                            <h3 class="text-[24px] font-bold mt-[24px]">পুলিশ</h3>
+                            <p class="text-[#5C5C5C]">Police</p>
+                            <h2 class="text-[32px] font-semibold mt-[24px]">999</h2>
+                            <div class="h-[37px] w-[103px] bg-[#f2f2f2] flex  justify-center  items-center rounded-[9999px] mb-[24px]">
+                                <p class="text-[#5C5C5C]">পুলিশ</p>
+                            </div>
+                            <div class="flex gap-2">
+                                <button class="w-[182px] h-[40px] rounded-[8px] border-1 border-gray-300 cursor-pointer text-[#5C5C5C] hover:bg-[#00a606] hover:text-white">
+                                   <i class="fa-regular fa-copy"></i> Copy
+                                </button>
+                                <button id="call-btn-2" class="w-[182px] h-[40px] rounded-[8px] bg-[#00a606] text-white cursor-pointer hover:bg-[#5C5C5C] hover:text-white hover: border-1 border-gray-300">
+                                   <i class="fa-solid fa-phone"></i> Call
+                                </button>
+                            </div>
+
+                        </div>
+                        <!-- third-card -->
+                        <div class="cards bg-white p-[32px] rounded-[12px]">
+                            <div class="flex justify-between items-center">
+                                <div class="p-[14px] bg-[#ffe3e2] rounded-[16px]">
+                                <img class="h-[32px] w-[32px]" src="./assets/fire-service.png" alt="">
+                                </div>
+                                <span class="heart-btn text-[24px] cursor-pointer"><i class="fa-regular fa-heart"></i></span>
+                            </div>
+                            <h3 class="text-[24px] font-bold mt-[24px]">ফায়ার সার্ভিস</h3>
+                            <p class="text-[#5C5C5C]">Fire Service</p>
+                            <h2 class="text-[32px] font-semibold mt-[24px]">999</h2>
+                            <div class="h-[37px] w-[103px] bg-[#f2f2f2] flex  justify-center  items-center rounded-[9999px] mb-[24px]">
+                                <p class="text-[#5C5C5C]">ফায়ার</p>
+                            </div>
+                            <div class="flex gap-2">
+                                <button class="w-[182px] h-[40px] rounded-[8px] border-1 border-gray-300 cursor-pointer text-[#5C5C5C] hover:bg-[#00a606] hover:text-white">
+                                   <i class="fa-regular fa-copy"></i> Copy
+                                </button>
+                                <button id="call-btn-3" class="w-[182px] h-[40px] rounded-[8px] bg-[#00a606] text-white cursor-pointer hover:bg-[#5C5C5C] hover:text-white hover: border-1 border-gray-300">
+                                   <i class="fa-solid fa-phone"></i> Call
+                                </button>
+                            </div>
+
+                        </div>
+                        <!-- fourth-card -->
+                        <div class="cards bg-white p-[32px] rounded-[12px]">
+                            <div class="flex justify-between items-center">
+                                <div class="p-[14px] bg-[#ffe3e2] rounded-[16px]">
+                                <img class="h-[32px] w-[32px]" src="./assets/ambulance.png" alt="">
+                                </div>
+                                <span class="heart-btn text-[24px] cursor-pointer"><i class="fa-regular fa-heart"></i></span>
+                            </div>
+                            <h3 class="text-[24px] font-bold mt-[24px]">অ্যাম্বুলেন্স</h3>
+                            <p class="text-[#5C5C5C]">Ambulance</p>
+                            <h2 class="text-[32px] font-semibold mt-[24px]">1994-999999</h2>
+                            <div class="h-[37px] w-[103px] bg-[#f2f2f2] flex  justify-center  items-center rounded-[9999px] mb-[24px]">
+                                <p class="text-[#5C5C5C]">স্বাস্থ্য</p>
+                            </div>
+                            <div class="flex gap-2">
+                                <button class="w-[182px] h-[40px] rounded-[8px] border-1 border-gray-300 cursor-pointer text-[#5C5C5C] hover:bg-[#00a606] hover:text-white">
+                                   <i class="fa-regular fa-copy"></i> Copy
+                                </button>
+                                <button id="call-btn-4" class="w-[182px] h-[40px] rounded-[8px] bg-[#00a606] text-white cursor-pointer hover:bg-[#5C5C5C] hover:text-white hover: border-1 border-gray-300">
+                                   <i class="fa-solid fa-phone"></i> Call
+                                </button>
+                            </div>
+
+                        </div>
+                        <!-- fifth-card -->
+                        <div class="cards bg-white p-[32px] rounded-[12px]">
+                            <div class="flex justify-between items-center">
+                                <div class="p-[14px] bg-[#ffe3e2] rounded-[16px]">
+                                <img class="h-[32px] w-[32px]" src="./assets/emergency.png" alt="">
+                                </div>
+                                <span class="heart-btn text-[24px] cursor-pointer"><i class="fa-regular fa-heart"></i></span>
+                            </div>
+                            <h3 class="text-[24px] font-bold mt-[24px]">নারী ও শিশু সহায়তা</h3>
+                            <p class="text-[#5C5C5C]">Women & Child Helpline</p>
+                            <h2 class="text-[32px] font-semibold mt-[24px]">109</h2>
+                            <div class="h-[37px] w-[103px] bg-[#f2f2f2] flex  justify-center  items-center rounded-[9999px] mb-[24px]">
+                                <p class="text-[#5C5C5C]">সহায়তা</p>
+                            </div>
+                            <div class="flex gap-2">
+                                <button class="w-[182px] h-[40px] rounded-[8px] border-1 border-gray-300 cursor-pointer text-[#5C5C5C] hover:bg-[#00a606] hover:text-white">
+                                   <i class="fa-regular fa-copy"></i> Copy
+                                </button>
+                                <button id="call-btn-5" class="w-[182px] h-[40px] rounded-[8px] bg-[#00a606] text-white cursor-pointer hover:bg-[#5C5C5C] hover:text-white hover: border-1 border-gray-300">
+                                   <i class="fa-solid fa-phone"></i> Call
+                                </button>
+                            </div>
+
+                        </div>
+                        <!-- sixth-card -->
+                        <div class="cards bg-white p-[32px] rounded-[12px]">
+                            <div class="flex justify-between items-center">
+                                <div class="p-[14px] bg-[#ffe3e2] rounded-[16px]">
+                                <img class="h-[32px] w-[32px]" src="./assets/emergency.png" alt="">
+                                </div>
+                                <span class="heart-btn text-[24px] cursor-pointer"><i class="fa-regular fa-heart"></i></span>
+                            </div>
+                            <h3 class="text-[24px] font-bold mt-[24px]">দুদক</h3>
+                            <p class="text-[#5C5C5C]">Anti-Corruption</p>
+                            <h2 class="text-[32px] font-semibold mt-[24px]">106</h2>
+                            <div class="h-[37px] w-[103px] bg-[#f2f2f2] flex  justify-center  items-center rounded-[9999px] mb-[24px]">
+                                <p class="text-[#5C5C5C]">সরকারি</p>
+                            </div>
+                            <div class="flex gap-2">
+                                <button class="w-[182px] h-[40px] rounded-[8px] border-1 border-gray-300 cursor-pointer text-[#5C5C5C] hover:bg-[#00a606] hover:text-white">
+                                   <i class="fa-regular fa-copy"></i> Copy
+                                </button>
+                                <button id="call-btn-6" class="w-[182px] h-[40px] rounded-[8px] bg-[#00a606] text-white cursor-pointer hover:bg-[#5C5C5C] hover:text-white hover: border-1 border-gray-300">
+                                   <i class="fa-solid fa-phone"></i> Call
+                                </button>
+                            </div>
+
+                        </div>
+                        <!-- seventh-card -->
+                        <div class="cards bg-white p-[32px] rounded-[12px]">
+                            <div class="flex justify-between items-center">
+                                <div class="p-[14px] bg-[#ffe3e2] rounded-[16px]">
+                                <img class="h-[32px] w-[32px]" src="./assets/emergency.png" alt="">
+                                </div>
+                                <span class="heart-btn text-[24px] cursor-pointer"><i class="fa-regular fa-heart"></i></span>
+                            </div>
+                            <h3 class="text-[24px] font-bold mt-[24px]">বিদ্যুৎ বিভ্রাট</h3>
+                            <p class="text-[#5C5C5C]">Electricity Outage</p>
+                            <h2 class="text-[32px] font-semibold mt-[24px]">16216</h2>
+                            <div class="h-[37px] w-[103px] bg-[#f2f2f2] flex  justify-center  items-center rounded-[9999px] mb-[24px]">
+                                <p class="text-[#5C5C5C]">বিদ্যুৎ</p>
+                            </div>
+                            <div class="flex gap-2">
+                                <button class="w-[182px] h-[40px] rounded-[8px] border-1 border-gray-300 cursor-pointer text-[#5C5C5C] hover:bg-[#00a606] hover:text-white">
+                                   <i class="fa-regular fa-copy"></i> Copy
+                                </button>
+                                <button id="call-btn-7" class="w-[182px] h-[40px] rounded-[8px] bg-[#00a606] text-white cursor-pointer hover:bg-[#5C5C5C] hover:text-white hover: border-1 border-gray-300">
+                                   <i class="fa-solid fa-phone"></i> Call
+                                </button>
+                            </div>
+
+                        </div>
+                        <!-- eight-card -->
+                        <div class="cards bg-white p-[32px] rounded-[12px]">
+                            <div class="flex justify-between items-center">
+                                <div class="p-[14px] bg-[#ffe3e2] rounded-[16px]">
+                                <img class="h-[32px] w-[32px]" src="./assets/brac.png" alt="">
+                                </div>
+                                <span class="heart-btn text-[24px] cursor-pointer"><i class="fa-regular fa-heart"></i></span>
+                            </div>
+                            <h3 class="text-[24px] font-bold mt-[24px]">ব্র্যাক</h3>
+                            <p class="text-[#5C5C5C]">Brac</p>
+                            <h2 class="text-[32px] font-semibold mt-[24px]">16445</h2>
+                            <div class="h-[37px] w-[103px] bg-[#f2f2f2] flex  justify-center  items-center rounded-[9999px] mb-[24px]">
+                                <p class="text-[#5C5C5C]">এনজিও</p>
+                            </div>
+                            <div class="flex gap-2">
+                                <button class="w-[182px] h-[40px] rounded-[8px] border-1 border-gray-300 cursor-pointer text-[#5C5C5C] hover:bg-[#00a606] hover:text-white">
+                                   <i class="fa-regular fa-copy"></i> Copy
+                                </button>
+                                <button id="call-btn-8" class="w-[182px] h-[40px] rounded-[8px] bg-[#00a606] text-white cursor-pointer hover:bg-[#5C5C5C] hover:text-white hover:border-1 border-gray-300">
+                                   <i class="fa-solid fa-phone"></i> Call
+                                </button>
+                            </div>
+
+                        </div>
+                        <!-- ninth-card -->
+                        <div class="cards bg-white p-[32px] rounded-[12px]">
+                            <div class="flex justify-between items-center">
+                                <div class="p-[14px] bg-[#ffe3e2] rounded-[16px]">
+                                <img class="h-[32px] w-[32px]" src="./assets/Bangladesh-Railway.png" alt="">
+                                </div>
+                                <span class="heart-btn text-[24px] cursor-pointer"><i class="fa-regular fa-heart"></i></span>
+                            </div>
+                            <h3 class="text-[24px] font-bold mt-[24px]">বাংলাদেশ রেলওয়ে</h3>
+                            <p class="text-[#5C5C5C]">Bangladesh Railway</p>
+                            <h2 class="text-[32px] font-semibold mt-[24px]">163</h2>
+                            <div class="h-[37px] w-[103px] bg-[#f2f2f2] flex  justify-center  items-center rounded-[9999px] mb-[24px]">
+                                <p class="text-[#5C5C5C]">পরিবহন</p>
+                            </div>
+                            <div class="flex gap-2">
+                                <button class="w-[182px] h-[40px] rounded-[8px] border-1 border-gray-300 cursor-pointer text-[#5C5C5C] hover:bg-[#00a606] hover:text-white">
+                                   <i class="fa-regular fa-copy"></i> Copy
+                                </button>
+                                <button id="call-btn-9" class="w-[182px] h-[40px] rounded-[8px] bg-[#00a606] text-white cursor-pointer hover:bg-[#5C5C5C] hover:text-white hover: border-1 border-gray-300]">
+                                   <i class="fa-solid fa-phone"></i> Call
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+
+                <!-- right container -->
+                <div class="right-div w-[25%] mt-[25px] items-stretch "> 
+                    <div class="bg-white rounded-[12px] p-4 h-[100vh]">
+                        
+                        
+                            <div class="flex justify-between items-center">
+                                <div class="flex gap-2 justify-center items-center ">
+                                    <span><i class="fa-regular fa-clock"></i></span>
+                                    <h3 class="text-[20px]">Call History</h3>
+                                </div>
+                                <button id="clear-history" class="w-[114px] h-[52px] bg-[#00a63e] rounded-[50px] text-white cursor-pointer">
+                                    Clear
+                                </button>
+                            </div>
+                            <div id="history-container"></div>
+                        
+
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+
+
+        
+        
+
+    </main>
+
+    <script>
+        
+        //increase heart Count
+
+        const heartButton = document.querySelectorAll('.heart-btn')
+        for(const i of heartButton){
+            i.addEventListener('click', function(event){
+                const heartCount =parseInt(document.getElementById('heart-count').innerText)
+                document.getElementById('heart-count').innerText = heartCount+1
+            })
+        }
+
+        // decrease coin count
+         
+        // first btn
+
+        document.getElementById('call-btn-1').addEventListener('click', function(event){
+            event.preventDefault()
+            const totalCoin = parseInt(document.getElementById('total-coin').innerText)
+            if(totalCoin>0){
+                const remainCoin = totalCoin - 20
+                const rem = document.getElementById('total-coin').innerText = remainCoin
+                alert("📞 Calling জাতীয় জরুরি সেবা 999...")
+
+                const history = document.createElement('div')
+                history.innerHTML = `
+                <div class="flex justify-between rounded-md bg-[#f2f2f2] p-5 mt-5">
+                <div>
+                    <p>জাতীয় জরুরি সেবা</p>
+                    <p>999</p>
+                </div>
+                <p>${new Date().toLocaleTimeString()}</p>
+    
+                </div>
+                `
+                document.getElementById('history-container').appendChild(history)
+            }
+            else{
+                alert("❌ আপনার পর্যাপ্ত কয়েন নেই। কল করতে কমপক্ষে ২০ কয়েন লাগবে।")
+            }
+
+            
+            
+        })
+
+        // second btn
+
+        document.getElementById('call-btn-2').addEventListener('click', function(event){
+            event.preventDefault()
+            const totalCoin = parseInt(document.getElementById('total-coin').innerText)
+            if(totalCoin>0){
+                const remainCoin = totalCoin - 20
+                const rem = document.getElementById('total-coin').innerText = remainCoin
+                alert("📞 Calling পুলিশ 999...")
+
+                const history = document.createElement('div')
+                history.innerHTML = `
+                <div class="flex justify-between rounded-md bg-[#f2f2f2] p-5 mt-5">
+                <div>
+                    <p>পুলিশ</p>
+                    <p>999</p>
+                </div>
+                <p>${new Date().toLocaleTimeString()}</p>
+    
+                </div>
+                `
+                document.getElementById('history-container').appendChild(history)
+            }
+            else{
+                alert("❌ আপনার পর্যাপ্ত কয়েন নেই। কল করতে কমপক্ষে ২০ কয়েন লাগবে।")
+            }
+
+            
+            
+        })
+
+        // third btn
+
+        document.getElementById('call-btn-3').addEventListener('click', function(event){
+            event.preventDefault()
+            const totalCoin = parseInt(document.getElementById('total-coin').innerText)
+            if(totalCoin>0){
+                const remainCoin = totalCoin - 20
+                const rem = document.getElementById('total-coin').innerText = remainCoin
+                alert("📞 Calling ফায়ার সার্ভিস 999...")
+
+                const history = document.createElement('div')
+                history.innerHTML = `
+                <div class="flex justify-between rounded-md bg-[#f2f2f2] p-5 mt-5">
+                <div>
+                    <p>ফায়ার সার্ভিস</p>
+                    <p>999</p>
+                </div>
+                <p>${new Date().toLocaleTimeString()}</p>
+    
+                </div>
+                `
+                document.getElementById('history-container').appendChild(history)
+            }
+            else{
+                alert("❌ আপনার পর্যাপ্ত কয়েন নেই। কল করতে কমপক্ষে ২০ কয়েন লাগবে।")
+            }
+
+            
+            
+        })
+
+        // forth btn
+
+        document.getElementById('call-btn-4').addEventListener('click', function(event){
+            event.preventDefault()
+            const totalCoin = parseInt(document.getElementById('total-coin').innerText)
+            if(totalCoin>0){
+                const remainCoin = totalCoin - 20
+                const rem = document.getElementById('total-coin').innerText = remainCoin
+                alert("📞 Calling অ্যাম্বুলেন্স 1994-999999...")
+
+                const history = document.createElement('div')
+                history.innerHTML = `
+                <div class="flex justify-between rounded-md bg-[#f2f2f2] p-5 mt-5">
+                <div>
+                    <p>অ্যাম্বুলেন্স</p>
+                    <p>1994-999999</p>
+                </div>
+                <p>${new Date().toLocaleTimeString()}</p>
+    
+                </div>
+                `
+                document.getElementById('history-container').appendChild(history)
+            }
+            else{
+                alert("❌ আপনার পর্যাপ্ত কয়েন নেই। কল করতে কমপক্ষে ২০ কয়েন লাগবে।")
+            }
+
+            
+            
+        })
+
+        // fifth bit
+
+        document.getElementById('call-btn-5').addEventListener('click', function(event){
+            event.preventDefault()
+            const totalCoin = parseInt(document.getElementById('total-coin').innerText)
+            if(totalCoin>0){
+                const remainCoin = totalCoin - 20
+                const rem = document.getElementById('total-coin').innerText = remainCoin
+                alert("📞 Calling নারী ও শিশু সহায়তা 109...")
+
+                const history = document.createElement('div')
+                history.innerHTML = `
+                <div class="flex justify-between rounded-md bg-[#f2f2f2] p-5 mt-5">
+                <div>
+                    <p>নারী ও শিশু সহায়তা</p>
+                    <p>109</p>
+                </div>
+                <p>${new Date().toLocaleTimeString()}</p>
+    
+                </div>
+                `
+                document.getElementById('history-container').appendChild(history)
+            }
+            else{
+                alert("❌ আপনার পর্যাপ্ত কয়েন নেই। কল করতে কমপক্ষে ২০ কয়েন লাগবে।")
+            }
+
+            
+            
+        })
+
+        // sixth btn
+        
+        document.getElementById('call-btn-6').addEventListener('click', function(event){
+            event.preventDefault()
+            const totalCoin = parseInt(document.getElementById('total-coin').innerText)
+            if(totalCoin>0){
+                const remainCoin = totalCoin - 20
+                const rem = document.getElementById('total-coin').innerText = remainCoin
+                alert("📞 Calling দুদক 106...")
+
+                const history = document.createElement('div')
+                history.innerHTML = `
+                <div class="flex justify-between rounded-md bg-[#f2f2f2] p-5 mt-5">
+                <div>
+                    <p>দুদক</p>
+                    <p>106</p>
+                </div>
+                <p>${new Date().toLocaleTimeString()}</p>
+    
+                </div>
+                `
+                document.getElementById('history-container').appendChild(history)
+            }
+            else{
+                alert("❌ আপনার পর্যাপ্ত কয়েন নেই। কল করতে কমপক্ষে ২০ কয়েন লাগবে।")
+            }
+
+            
+            
+        })
+
+        // seventh btn
+
+        document.getElementById('call-btn-7').addEventListener('click', function(event){
+            event.preventDefault()
+            const totalCoin = parseInt(document.getElementById('total-coin').innerText)
+            if(totalCoin>0){
+                const remainCoin = totalCoin - 20
+                const rem = document.getElementById('total-coin').innerText = remainCoin
+                alert("📞 Calling বিদ্যুৎ বিভ্রাট 16216...")
+
+                const history = document.createElement('div')
+                history.innerHTML = `
+                <div class="flex justify-between rounded-md bg-[#f2f2f2] p-5 mt-5">
+                <div>
+                    <p>বিদ্যুৎ বিভ্রাট</p>
+                    <p>16216</p>
+                </div>
+                <p>${new Date().toLocaleTimeString()}</p>
+    
+                </div>
+                `
+                document.getElementById('history-container').appendChild(history)
+            }
+            else{
+                alert("❌ আপনার পর্যাপ্ত কয়েন নেই। কল করতে কমপক্ষে ২০ কয়েন লাগবে।")
+            }
+
+            
+            
+        })
+
+        // eight btn
+
+        document.getElementById('call-btn-8').addEventListener('click', function(event){
+            event.preventDefault()
+            const totalCoin = parseInt(document.getElementById('total-coin').innerText)
+            if(totalCoin>0){
+                const remainCoin = totalCoin - 20
+                const rem = document.getElementById('total-coin').innerText = remainCoin
+                alert("📞 Calling ব্র্যাক 16445...")
+
+                const history = document.createElement('div')
+                history.innerHTML = `
+                <div class="flex justify-between rounded-md bg-[#f2f2f2] p-5 mt-5">
+                <div>
+                    <p>ব্র্যাক</p>
+                    <p>16445</p>
+                </div>
+                <p>${new Date().toLocaleTimeString()}</p>
+    
+                </div>
+                `
+                document.getElementById('history-container').appendChild(history)
+            }
+            else{
+                alert("❌ আপনার পর্যাপ্ত কয়েন নেই। কল করতে কমপক্ষে ২০ কয়েন লাগবে।")
+            }
+
+            
+            
+        })
+
+        // ninth btn
+        document.getElementById('call-btn-9').addEventListener('click', function(event){
+            event.preventDefault()
+            const totalCoin = parseInt(document.getElementById('total-coin').innerText)
+            if(totalCoin>0){
+                const remainCoin = totalCoin - 20
+                const rem = document.getElementById('total-coin').innerText = remainCoin
+                alert("📞 Calling বাংলাদেশ রেলওয়ে 163...")
+
+                const history = document.createElement('div')
+                history.innerHTML = `
+                <div class="flex justify-between rounded-md bg-[#f2f2f2] p-5 mt-5">
+                <div>
+                    <p>বাংলাদেশ রেলওয়ে</p>
+                    <p>163</p>
+                </div>
+                <p>${new Date().toLocaleTimeString()}</p>
+    
+                </div>
+                `
+                document.getElementById('history-container').appendChild(history)
+            }
+            else{
+                alert("❌ আপনার পর্যাপ্ত কয়েন নেই। কল করতে কমপক্ষে ২০ কয়েন লাগবে।")
+            }
+
+        })
+
+        
+
+        // clear history btn
+        document.getElementById('clear-history').addEventListener('click', function(event){
+
+            event.preventDefault()
+            document.getElementById('history-container').innerHTML = ''
+
+        })
+
+
+
+
+
+                
+
+
+
+    </script>
+    
+</body>
+</html>
