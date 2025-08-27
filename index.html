@@ -16,16 +16,16 @@
 
 
 </head>
-<body>
-    <header>
+<body class="">
+    <header class="">
         <!-- nav-bar section -->
-        <nav class="max-w-[1380px] mx-auto flex justify-between items-center mt-[25px]">
-            <div class="nav-left flex gap-3">
+        <nav class="max-w-[1380px] mx-auto flex flex-col gap-5 md:flex-row justify-between items-center mt-[25px] ">
+            <div class="nav-left flex  justify-center items-center gap-3">
                 <img class="h-[60] w-[60px]" src="./assets/logo.png" alt="">
                 <h1 class="text-[#006747] text-[20px] font-bold">Emergency <br>Services</h1>
             </div>
 
-            <div class="nav-right flex gap-[20px]">
+            <div class="nav-right flex flex-row gap-[20px] mx-auto md:p-0 md:mx-0">
                 <div class="flex justify-center gap-3 items-center  w-[123px] h-[52px] rounded-[50px] bg-[#41ff6b1a] ">
                     <h3 id="heart-count">0</h3>
                     <img class="h-[30px] w-[30px]" src="./assets/heart.png" alt="">
@@ -48,21 +48,23 @@
     <main>
 
         <!-- banner section -->
-        <div class="h-[240px] w-full bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] mt-[25px] pt-5">
+        <div class="w-full md:h-[250px] md:w-full bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] mt-[25px] pt-5 flex justify-center items-center">
+            <div class="p-1">
             <img class="h-[92px] w-[92px] mx-auto" src="./assets/logo-dark.png" alt="">
-            <h2 class="text-[40px] font-semibold text-white text-center my-3">জরুরি সেবা ডিরেক্টরি</h2>
+            <h2 class="text-[30px] md:text-[40px] font-semibold text-white text-center my-3">জরুরি সেবা ডিরেক্টরি</h2>
             <p class="text-center text-white">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
+            </div>
         </div>
 
         <!-- service and call history section -->
-        <div class="bg-[#dfefff]">
-            <div class="parent-div max-w-[1380px] mx-auto flex gap-5">
+        <div class=" bg-[#dfefff]">
+            <div class="parent-div max-w-[1380px] mx-auto flex flex-col md:flex-row gap-5">
                 
 
                 <!-- left container -->
-                <div class="left-div mt-[25px] flex-1 items-stretch">
+                <div class="left-div mt-[35px] p-5 md:p-0 md:mt-[25px] flex-1 ">
                     <!-- cards container -->
-                    <div class="cards-container gap-[30px] grid grid-cols-3">
+                    <div class="cards-container gap-[30px] grid grid-cols-1 md:grid-cols-3">
                         <!-- first-card -->
                         <div class="cards bg-white p-[32px] rounded-[12px]">
                             <div class="flex justify-between items-center">
@@ -285,7 +287,7 @@
                 </div>
 
                 <!-- right container -->
-                <div class="right-div w-[25%] mt-[25px] items-stretch "> 
+                <div class="right-div w-full md:w-[25%] p-5 md:p-0 mt-[25px] items-stretch "> 
                     <div class="bg-white rounded-[12px] p-4 h-[100vh]">
                         
                         
