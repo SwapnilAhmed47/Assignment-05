@@ -28,7 +28,8 @@
    = Event Delegation is to set event listener to parent element so that we can handel the event in inner child as well.
      it's useful because we don't need to add extra event to the child
 
-5. preventDefault()
+5. What is the difference between preventDefault() and stopPropagation() methods?
+     preventDefault()
    = To stop the default reload system in a website
    stopPropagation()
    = To stop event bubbling
