@@ -21,17 +21,19 @@
 3. What is Event Bubbling and how does it work?
 
    = when an event (eg. click) happend to element then it propagate from inner to outer
-   nav - header - body - document
+   
+   (nav - header - body - document)
 
-4. What is Event Delegation in JavaScript? Why is it useful?
+5. What is Event Delegation in JavaScript? Why is it useful?
 
    = Event Delegation is to set event listener to parent element so that we can handel the event in inner child as well.
      it's useful because we don't need to add extra event to the child
 
-5. What is the difference between preventDefault() and stopPropagation() methods?
+6. What is the difference between preventDefault() and stopPropagation() methods?
    
    preventDefault()
    = To stop the default reload system in a website
+   
    stopPropagation()
    = To stop event bubbling
 
