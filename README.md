@@ -29,7 +29,8 @@
      it's useful because we don't need to add extra event to the child
 
 5. What is the difference between preventDefault() and stopPropagation() methods?
-     preventDefault()
+   
+   preventDefault()
    = To stop the default reload system in a website
    stopPropagation()
    = To stop event bubbling
