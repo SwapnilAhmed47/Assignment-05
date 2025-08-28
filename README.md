@@ -1,16 +1,16 @@
 1. What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
    
-getElementById("idName")
-= Always helps to find element by unique id. Every elements have unique id.
+   getElementById("idName")
+   = Always helps to find element by unique id. Every elements have unique id.
 
-getElementsByClassName("className")
-= Helps to find all the element by same class name. Every elements can have same classname.
+   getElementsByClassName("className")
+   = Helps to find all the element by same class name. Every elements can have same classname.
 
-querySelector("selector")
-= pick the first element by id, class or tag name. 
+   querySelector("selector")
+   = pick the first element by id, class or tag name. 
 
-querySelectorAll("selector")
-= pick all the element by id, class or tag name. 
+   querySelectorAll("selector")
+   = pick all the element by id, class or tag name. 
 
 2. How do you create and insert a new element into the DOM?
    Create new element
