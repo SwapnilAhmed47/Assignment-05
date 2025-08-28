@@ -298,7 +298,30 @@
 
         })
 
-        
+
+    // copy button
+    //   document.getElementById('copy-btn-1').addEventListener('click', function(){
+    //     const copyCount = parseInt(document.getElementById('copy-count').innerText)
+    //     const countINC = copyCount+1
+    //     document.getElementById('copy-count').innerText = countINC
+    //   })
+
+    const copyButton = document.querySelectorAll('.copy-btn')
+    const copyText = document.querySelectorAll('.copy-text')
+
+    for(let i=0; i<copyButton.length; i++){
+        copyButton[i].addEventListener('click', function(){
+            navigator.clipboard.writeText(copyText[i].innerText) 
+            alert("নম্বর কপি হয়েছে "+copyText[i].innerText)
+            const copyCount = parseInt(document.getElementById('copy-count').innerText)
+            const count = copyCount+1
+            document.getElementById('copy-count').innerText = count
+        })
+    }
+      
+       
+
+
 
 
    
